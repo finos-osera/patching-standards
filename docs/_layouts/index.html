@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Open patching standards for regulated consumption</h1>
+      <p class="hero-subtitle">A provisional FINOS OSERA evaluation draft for producing, publishing, and consuming open backpatches with provenance, release evidence, vulnerability feeds, and recipient-focused test guidance. This is not published as a formal standard.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#standards">Browse standards</a>
+        <a class="button secondary" href="{{ site.baseurl }}/governance/">Contribute</a>
+      </div>
+    </div>
+    <aside class="evidence-panel" aria-label="Current OSERA evidence">
+      <div class="panel-header">
+        <span>Current evidence</span>
+        <strong>July 2026</strong>
+      </div>
+      <dl>
+        <div><dt>60</dt><dd>public <code>backpatch-*</code> repositories observed in <a href="https://github.com/finos-osera" target="_blank" rel="noopener">finos-osera</a></dd></div>
+        <div><dt>61</dt><dd><code>+backpatch.NNN</code> release tags across 55 public backpatch repositories</dd></div>
+        <div><dt>2</dt><dd>feed formats expected: OpenVEX and CycloneDX</dd></div>
+        <div><dt>1</dt><dd>shared branch prefix: <code>backpatch/&lt;version&gt;</code></dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap section intro-grid">
+  <div>
+    <h2>Why this exists</h2>
+    <p>OSERA backpatch work has moved from a small set of experiments into a larger patch library spanning older Java ecosystems, build tooling variations, and end-of-life software lines. The emerging practice now needs a stable, open, bank-consumable format.</p>
+  </div>
+  <div>
+    <h2>What it standardizes</h2>
+    <p>The draft focuses on fork management, source-change provenance, release compatibility, VEX/SBOM feeds, and the recipient evidence enterprises need to assess what changed and what surface area to test.</p>
+  </div>
+</section>
+
+<section id="standards" class="catalogue-section">
+  <div class="wrap">
+    <div class="section-heading">
+      <div>
+        <h2>Standards catalog</h2>
+        <p>Numbered requirements and examples, modeled on the SDLC Controls Framework catalog style and adapted for patch production and consumption.</p>
+      </div>
+      <div class="search-box">
+        <label for="catalogueSearch">Search</label>
+        <input id="catalogueSearch" type="search" placeholder="Search standards, evidence, feeds">
+      </div>
+    </div>
+    {% include catalogue.html %}
+  </div>
+</section>
+
+<section class="wrap section split-band">
+  <div>
+    <h2>Recipient evidence is part of the standard</h2>
+    <p>Patch delivery should not stop at a patched coordinate. Providers should publish a concise, machine-readable explanation of what changed, why it changed, and what application surface area recipients should consider testing.</p>
+  </div>
+  <a class="button primary" href="{{ site.baseurl }}/standards/evd-001-change-and-test-surface/">Review EVD-001</a>
+</section>

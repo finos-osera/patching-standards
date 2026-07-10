@@ -1,23 +1,40 @@
-# Community Specification
+# OSERA Patching Standards
 
-## What is the Community Specification For?
+This repository contains a provisional evaluation standards site for FINOS OSERA patch production and consumption.
 
-The Community Specification process is a repository-based approach for creating standards and specifications in version control systems, such as Git. 
+The work is inspired by the catalog-oriented approach used by the [FINOS SDLC Controls Framework](https://github.com/finos-labs/SDLC-Controls-Framework), but focuses on OSERA backpatches: fork management, source provenance, release compatibility, OpenVEX and CycloneDX feeds, and the recipient evidence enterprises need to decide what changed and what to test.
 
-## What is the benefit?
+## Site
 
-The Community Specification allows you to start a specification development effort as easily as an open source project.  The Community Specification incorporates the terms and processes required for standards and specification development, including legal terms, intellectual property issues, due process, and governance.  It also provides the mechanisms to allow your project to grow and scale.  For example, the Community Specification provides the basis to take your specification to other standards bodies, including international standards bodies, for formal standardization if your community desires to pursue those options.
+The standards site lives in [`docs/`](docs/) and is designed for GitHub Pages/Jekyll.
 
-## How to get started?
+```sh
+cd docs
+bundle install
+bundle exec jekyll serve
+```
 
-Instructions for using the Community Specification are included in the [Getting Started.md file](governance-documents/Getting%20Started.md).
+The site includes:
 
-## Could I just use an open source license for my specifications? Why should I use a specification license?
+* a searchable standards catalog;
+* numbered draft standards such as `FORK-001`, `SRC-002`, `REL-002`, `FEED-001`, and `EVD-001`;
+* examples for patch evidence and recipient guidance;
+* governance notes for moving from provisional evaluation content toward a Community Specification.
 
-Open source is collaboration around a specific codebase, while specifications provide a blueprint developers implement in different ways in many different codebases. Accordingly, open source licenses provide terms to use and modify a particular codebase and specification licenses are designed to provide terms for separate independent implementations of the specification. Because of this, if you use an open source license for specifications, people implementing those specifications may be doing so without the meaningful copyright or patent grants that you expect.
+## Source material
 
-A second difference is that common open source software and specification licenses tend to have different coverage scopes for intellectual property terms. Open source licenses generally grant terms scoped only to a contributor's contributions. Specification licenses, however, generally cover implementations of the entire specification, regardless of who made the actual contribution. Because the specification will often be developed with contributions from multiple organizations, the various contributing organizations will often want to review and approve the full specification before extending patent commitments to the final, combined result. 
+The initial content is aligned with:
 
-## Who developed the Community Specification
+* current OSERA community materials at <https://osera.finos.org> and <https://github.com/finos-osera/community>;
+* the public OSERA GitHub organization, which had 62 public repositories on July 10, 2026, including 60 public `backpatch-*` repositories;
+* a provider-hosted OpenVEX and CycloneDX reference example;
+* Jonathan Schneider / Moderne OSERA backpatching work summarized in the July 7, 2026 OSERA update deck;
+* the group discussion about publishing patch-provider evidence such as "what changed" and "what surface area should recipients test".
 
-The Community Specification has been developed via the [Joint Development Foundation](http://www.jointdevelopment.org), with inspiration from the [Open Web Foundation agreements](http://openwebfoundation.org) and the [Alliance for Open Media Patent License 1.0](http://aomedia.org/license/patent-license/).
+## Status
+
+This material is provisional and in active evaluation status. It is intended to help OSERA members, patch providers, and enterprise recipients converge on an open, bank-consumable format before formal ratification. It has not been published as a formal FINOS standard.
+
+## Governance
+
+This repository keeps the Community Specification governance scaffold in [`governance-documents/`](governance-documents/). The site currently treats the standards as provisional evaluation material and points contributors toward that process.

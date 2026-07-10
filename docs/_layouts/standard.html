@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="wrap standard-page">
+  <div class="breadcrumb"><a href="{{ site.baseurl }}/">Home</a> / <a href="{{ site.baseurl }}/#standards">Standards</a> / {{ page.standard_id }}</div>
+  <div class="standard-header">
+    <div>
+      <span class="standard-id">{{ page.standard_id }}</span>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.summary }}</p>
+    </div>
+    <dl class="meta-panel">
+      <div><dt>Status</dt><dd>{{ page.doc-status }}</dd></div>
+      <div><dt>Category</dt><dd>{{ site.standard_classification[page.type] }}</dd></div>
+      <div><dt>Applies to</dt><dd>{{ page.applies-to | join: ", " }}</dd></div>
+    </dl>
+  </div>
+  <div class="standard-body">
+    {{ content }}
+  </div>
+</article>
