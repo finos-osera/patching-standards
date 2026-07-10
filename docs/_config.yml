@@ -1,0 +1,57 @@
+title: OSERA Patching Standards
+description: Open standards for producing, publishing, and consuming OSERA backpatches.
+baseurl: "/patching-standards"
+url: "https://finos-osera.github.io"
+
+version: provisional-evaluation
+release-date: 2026-07-10
+status_label: Active Evaluation
+status_description: This material is provisional and has not been published as a formal FINOS standard.
+
+document_status:
+  - name: Evaluation
+    description: Provisional material under active review; not published as a formal standard.
+  - name: Pre-Draft
+    description: Initial proposal collecting practice from OSERA backpatch work.
+  - name: Draft
+    description: Written for community review and implementation feedback.
+  - name: First-Reading-Approved
+    description: Accepted in principle by the working group, pending final approval.
+  - name: Working-Group-Approved
+    description: Approved by the working group for implementers.
+
+standard_classification:
+  FORK: Fork Management
+  SRC: Source Changes
+  REL: Release Process
+  FEED: Feeds and Advisories
+  EVD: Recipient Evidence
+  APP: Patch Application
+
+category_icons:
+  FORK: branch
+  SRC: code
+  REL: package
+  FEED: feed
+  EVD: evidence
+  APP: apply
+
+collections:
+  standards:
+    output: true
+    permalink: /standards/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: standards
+    values:
+      layout: standard
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

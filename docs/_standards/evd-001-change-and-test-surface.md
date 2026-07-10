@@ -1,0 +1,52 @@
+---
+sequence: 410
+standard_id: EVD-001
+title: Change and Test Surface Guidance
+summary: Providers publish concise recipient guidance describing what changed and what surface area should be tested.
+doc-status: Pre-Draft
+type: EVD
+applies-to:
+  - Patch providers
+  - Enterprise recipients
+  - Tooling providers
+---
+
+## Requirement
+
+Patch providers SHOULD publish a recipient-facing summary alongside each patch that describes:
+
+* what changed;
+* why the change was made;
+* whether the patch is an upstream backport or provider-developed fix;
+* what application surface area recipients should consider testing;
+* references to OpenRewrite recipes, markdown, LLM-friendly context, or other machine-readable guidance when available.
+
+## Rationale
+
+Financial services consumers need more than a coordinate. They need enough context to evaluate the patch, route testing, and explain adoption decisions internally.
+
+## Suggested schema
+
+```yaml
+recipient_guidance:
+  what_changed:
+    - Short, concrete change summary.
+  suggested_test_surface:
+    - APIs, frameworks, configuration paths, or runtime behaviors to test.
+  automation:
+    openrewrite_recipes:
+      - org.example.security.ExampleRecipe
+    llm_context: docs/patch-context.md
+```
+
+## Maturity note
+
+This is an intentionally early standard. The working group should refine the minimum fields and decide which parts belong in feeds, release notes, repository files, or separate evidence bundles.
+
+## Observed OSERA example
+
+The `backpatch-spring-framework` CVE-2024-38816 commit gives recipients useful test-surface evidence by identifying the affected WebMvc.fn and WebFlux.fn resource lookup classes and adding regression tests under those packages:
+
+<https://github.com/finos-osera/backpatch-spring-framework/commit/dfaa2e9a99173fc9cbb22a76c99f9acfe616ede6>
+
+That commit suggests a useful evidence pattern: provider notes should name the affected framework surface, list the regression tests added or run, and call out meaningful adaptations from the upstream fix.
