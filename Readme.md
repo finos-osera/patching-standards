@@ -1,6 +1,6 @@
 # OSERA Patching Standards
 
-[![badge-labs](https://user-images.githubusercontent.com/327285/230928932-7c75f8ed-e57b-41db-9fb7-a292a13a1e58.svg)](https://community.finos.org/docs/governance/lifecycle-stages/labs)
+[![badge-labs](docs/assets/finos-labs-badge.svg)](https://community.finos.org/docs/governance/lifecycle-stages/labs)
 
 This repository contains a provisional evaluation standards site for FINOS OSERA patch production and consumption.
 
