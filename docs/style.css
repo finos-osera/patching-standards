@@ -110,6 +110,17 @@ nav a { color: var(--ink); font-size: 14px; font-weight: 700; }
   font-size: 19px;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.labs-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  text-decoration: none;
+}
+.labs-badge img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
 .button {
   display: inline-flex;
   min-height: 42px;
