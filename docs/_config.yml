@@ -1,7 +1,7 @@
 title: OSERA Patching Standards
 description: Open standards for producing, publishing, and consuming OSERA backpatches.
-baseurl: "/patching-standards"
-url: "https://finos-osera.github.io"
+baseurl: ""
+url: "https://standards.osera.finos.org"
 
 version: provisional-evaluation
 release-date: 2026-07-10
