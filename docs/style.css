@@ -55,6 +55,7 @@ h1, h2, h3 {
   color: var(--navy);
   text-decoration: none;
 }
+.brand a { text-decoration: none; }
 .brand-logo { width: 96px; height: auto; display: block; }
 .brand-title {
   color: var(--muted);
